@@ -1,1 +1,263 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RubbySoft</title>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        a {
+            color: #e81cff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #fff;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e81cff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #d61bff;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-links ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-links ul li {
+            display: inline;
+        }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .hero .btn {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        /* About Section */
+        .about {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .about p {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Services Section */
+        .services {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .services .service-item {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .services .service-item:hover {
+            transform: scale(1.05);
+        }
+        .services .service-item i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #e81cff;
+        }
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e81cff;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+        .contact form .btn {
+            width: 100%;
+        }
+        /* Footer */
+        .footer {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer .social-links a {
+            margin: 0 10px;
+        }
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services .service-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar container">
+        <div class="navbar-logo">RubbySoft</div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to RubbySoft</h1>
+            <p>Innovative Chat Applications, Certification Systems, and Software Solutions</p>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At RubbySoft, our mission is to create innovative software solutions that enhance communication, streamline certification processes, and provide robust software systems for businesses of all sizes. Our values are rooted in excellence, integrity, and customer satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <i class="fas fa-comments"></i>
+                <h3>Chat Applications</h3>
+                <p>We build dynamic chat applications that facilitate seamless communication.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-certificate"></i>
+                <h3>Certification Systems</h3>
+                <p>Our certification systems are designed to streamline the certification process.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-code"></i>
+                <h3>Software Solutions</h3>
+                <p>We provide custom software solutions tailored to your business needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2024 RubbySoft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and animations -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
